@@ -1,0 +1,85 @@
+@font-face { font-family: "PT Serif"; src: url("__FONTS__/PT_Serif-Web-Regular.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "PT Serif"; src: url("__FONTS__/PT_Serif-Web-Bold.ttf"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "PT Serif"; src: url("__FONTS__/PT_Serif-Web-Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "PT Serif"; src: url("__FONTS__/PT_Serif-Web-BoldItalic.ttf"); font-weight: 700; font-style: italic; }
+@font-face { font-family: "PT Sans"; src: url("__FONTS__/PT_Sans-Web-Regular.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "PT Sans"; src: url("__FONTS__/PT_Sans-Web-Bold.ttf"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "PT Sans"; src: url("__FONTS__/PT_Sans-Web-Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "PT Sans"; src: url("__FONTS__/PT_Sans-Web-BoldItalic.ttf"); font-weight: 700; font-style: italic; }
+@font-face { font-family: "Noto Emoji"; src: url("__FONTS__/NotoEmoji-VF.ttf"); font-weight: 300 700; }
+
+@page { size: A4; }
+html { font-size: 10.5pt; }
+body { font-family: "PT Serif", "DejaVu Serif", serif, "Noto Emoji"; color: #0F172A; line-height: 1.42; margin: 0; text-align: left; orphans: 3; widows: 3; }
+main.lecture { counter-reset: none; }
+main.lecture > h1 { display: none; }
+h1, h2, h3, h4, h5, h6 { font-family: "PT Sans", "DejaVu Sans", sans-serif, "Noto Emoji"; color: #0F172A; line-height: 1.2; break-after: avoid; page-break-after: avoid; }
+h1 { font-size: 24pt; margin: 0 0 12pt; }
+h2 { font-size: 18pt; color: #1D4ED8; margin: 0 0 12pt; padding-bottom: 5pt; border-bottom: 2px solid #1D4ED8; break-before: page; page-break-before: always; }
+h3 { font-size: 13.5pt; margin: 16pt 0 6pt; color: #1E3A8A; }
+h4 { font-size: 11.5pt; margin: 12pt 0 4pt; color: #0F172A; }
+h5 { font-size: 10.5pt; margin: 10pt 0 3pt; font-style: italic; }
+p { margin: 0 0 6pt; }
+ul, ol { margin: 0 0 6pt 0; padding-left: 1.5em; }
+li { margin-bottom: 2pt; }
+li > p { margin-bottom: 2pt; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 90%; background: #F1F5F9; padding: 0 2px; border-radius: 2px; }
+pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8.5pt; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 6pt; white-space: pre-wrap; }
+hr { border: 0; border-top: 1px solid #CBD5E1; margin: 10pt 0; }
+a { color: inherit; text-decoration: none; }
+sup { font-size: 70%; }
+
+/* Таблицы */
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 8pt; font-family: "PT Sans", "DejaVu Sans", sans-serif, "Noto Emoji"; font-size: 8.8pt; line-height: 1.25; page-break-inside: auto; }
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; break-inside: avoid; }
+th, td { border: 1px solid #94A3B8; padding: 3pt 4.5pt; vertical-align: top; text-align: left; }
+th { background: #EFF6FF; font-weight: 700; color: #1E3A8A; }
+tbody tr:nth-child(even) td { background: #F8FAFC; }
+p.caption { font-family: "PT Sans", sans-serif, "Noto Emoji"; font-size: 9pt; color: #334155; margin: 2pt 0 10pt; }
+p.tab-caption { margin-top: 8pt; margin-bottom: 2pt; break-after: avoid; page-break-after: avoid; }
+
+/* Схемы */
+.figure { text-align: center; margin: 8pt 0 2pt; break-inside: avoid; page-break-inside: avoid; }
+.figure pre.mermaid { background: none; border: 0; padding: 0; }
+.figure svg { max-width: 100%; max-height: 235mm; height: auto; }
+.figure .svg-figure svg { max-width: 100%; }
+pre.mermaid-error { color: #B91C1C; font-size: 8pt; }
+
+/* Маркированные блоки */
+blockquote { margin: 6pt 0 8pt; padding: 5pt 9pt; border-left: 3px solid #94A3B8; background: #F8FAFC; break-inside: avoid; }
+blockquote p:last-child { margin-bottom: 0; }
+blockquote.def, p.mark.def { border-left-color: #1D4ED8; background: #EFF6FF; }
+blockquote.fact, p.mark.fact { border-left-color: #F59E0B; background: #FFFBEB; }
+blockquote.err, p.mark.err { border-left-color: #DC2626; background: #FEF2F2; }
+blockquote.deep, p.mark.deep { border-left: 3px dashed #64748B; background: #F1F5F9; font-size: 9.6pt; }
+blockquote.summary, p.mark.summary { border-left-color: #16A34A; background: #F0FDF4; }
+blockquote.quest, p.mark.quest { border-left-color: #7C3AED; background: #F5F3FF; }
+blockquote.viz, p.mark.viz { border: 1px dashed #94A3B8; border-left: 3px dashed #94A3B8; background: #FFFFFF; font-style: italic; color: #334155; }
+blockquote.verify, p.mark.verify { border-left-color: #EA580C; background: #FFF7ED; }
+p.mark { padding: 4pt 8pt; border-left: 3px solid #94A3B8; background: #F8FAFC; margin: 6pt 0 8pt; }
+
+/* Титульный лист */
+.title-page { height: 250mm; display: flex; flex-direction: column; justify-content: center; text-align: center; page-break-after: always; break-after: page; }
+.title-page .kicker { font-family: "PT Sans", sans-serif; color: #1D4ED8; font-size: 12pt; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18pt; }
+.title-page h1 { font-size: 30pt; color: #0F172A; margin-bottom: 14pt; }
+.title-page .subtitle { font-size: 13pt; color: #334155; margin-bottom: 30pt; }
+.title-page .meta { font-family: "PT Sans", sans-serif; font-size: 10.5pt; color: #334155; line-height: 1.6; }
+.title-page .note { margin-top: 40pt; font-size: 9pt; color: #64748B; max-width: 140mm; margin-left: auto; margin-right: auto; }
+
+/* Оглавление */
+nav.toc { page-break-after: always; break-after: page; font-family: "PT Sans", sans-serif; font-size: 9.3pt; line-height: 1.35; }
+nav.toc h2.toc-title { break-before: auto; page-break-before: auto; }
+.toc-entry { display: flex; align-items: baseline; margin: 1pt 0; }
+.toc-entry.lvl2 { font-weight: 700; margin-top: 5pt; }
+.toc-entry.lvl3 { padding-left: 14pt; }
+.toc-text { flex: 0 1 auto; }
+.toc-dots { flex: 1 1 auto; border-bottom: 1px dotted #94A3B8; margin: 0 4pt; min-width: 12pt; position: relative; top: -3pt; }
+.toc-page { flex: 0 0 auto; width: 22pt; text-align: right; }
+.body-start { color: #FFFFFF; font-size: 1pt; position: absolute; }
+
+/* KaTeX */
+.katex { font-size: 1.05em; }
+.katex-display { margin: 6pt 0; }
