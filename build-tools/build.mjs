@@ -103,7 +103,7 @@ window.__done = false; window.__errors = [];
   try {
     mermaid.initialize({ startOnLoad: false, securityLevel: "loose", theme: "base", fontFamily: "'PT Sans', Arial, sans-serif",
       themeVariables: { fontFamily: "'PT Sans', Arial, sans-serif", fontSize: "15px", primaryColor: "#EFF6FF", primaryBorderColor: "#1D4ED8", primaryTextColor: "#0F172A", lineColor: "#334155", secondaryColor: "#FEF3C7", tertiaryColor: "#F1F5F9", clusterBkg: "#F8FAFC", clusterBorder: "#94A3B8", edgeLabelBackground: "#FFFFFF" },
-      flowchart: { htmlLabels: true, curve: "basis", padding: 8, nodeSpacing: 30, rankSpacing: 40, useMaxWidth: true },
+      flowchart: { htmlLabels: true, curve: "basis", padding: 8, nodeSpacing: 30, rankSpacing: 40, useMaxWidth: true, wrappingWidth: 280 },
       mindmap: { useMaxWidth: true }, timeline: { useMaxWidth: true }, sequence: { useMaxWidth: true } });
     const nodes = Array.from(document.querySelectorAll("pre.mermaid"));
     for (const n of nodes) {
